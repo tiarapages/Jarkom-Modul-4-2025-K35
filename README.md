@@ -26,3 +26,7 @@
 | A21 | WAN Gudhur <--> Numenor | 2 (Point-to-Point) | 2 (Point-to-Point) | 4 (/30) |
 | A22 | WAN Numenor <--> Melkor | 2 (Point-to-Point) | 2 (Point-to-Point) | 4 (/30) |
 | A23 | WAN Melkor <--> Erain | 2 (Point-to-Point) | 2 (Point-to-Point) | 4 (/30) |
+
+# Hasil Topologi VLSM
+<img width="1170" height="649" alt="image" src="https://github.com/user-attachments/assets/0d981e30-f66c-4a6e-8849-ee0813edac3c" />
+
