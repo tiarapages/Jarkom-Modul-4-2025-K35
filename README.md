@@ -57,3 +57,33 @@
 | A22 | 10.81.15.224 | 255.255.255.252 | 10.81.15.227 | 10.81.15.225 - 10.81.15.226 |
 | A23 | 10.81.15.228 | 255.255.255.252 | 10.81.15.231 | 10.81.15.229 - 10.81.15.230 |
 
+
+# Config Node
+```
+# A3 (Inter-Router ke Valinor & Formost)
+# Ini adalah interface "WAN" Anda.
+# Saya asumsikan gateway-nya adalah IP router Formost di subnet A3.
+auto eth0
+iface eth0 inet static
+    address 10.81.15.177
+    netmask 255.255.255.248
+    gateway 10.81.15.178
+    # IP Valmar = 10.81.15.177
+    # IP Gateway (misal: Formost) = 10.81.15.178
+
+# A5 (LAN: Imrahil, Gwaith, Utumno)
+auto eth1
+iface eth1 inet static
+    address 10.81.15.65
+    netmask 255.255.255.192
+    # Network A5 = 10.81.15.64/26
+    # IP Gateway (Valmar) = 10.81.15.65
+
+# A2 (LAN: Doriath, Arnor)
+auto eth2
+iface eth2 inet static
+    address 10.81.15.129
+    netmask 255.255.255.224
+    # Network A2 = 10.81.15.128/27
+    # IP Gateway (Valmar) = 10.81.15.129
+```
