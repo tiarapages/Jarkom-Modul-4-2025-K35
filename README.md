@@ -27,6 +27,10 @@
 | A22 | WAN Numenor <--> Melkor | 2 (Point-to-Point) | 2 (Point-to-Point) | 4 (/30) |
 | A23 | WAN Melkor <--> Erain | 2 (Point-to-Point) | 2 (Point-to-Point) | 4 (/30) |
 
+# Hasil Topologi CDIR
+<img width="1323" height="785" alt="image" src="https://github.com/user-attachments/assets/3984ac4b-7285-4821-a1fd-cc2feabada40" />
+
+
 # Hasil Topologi VLSM
 <img width="1170" height="649" alt="image" src="https://github.com/user-attachments/assets/0d981e30-f66c-4a6e-8849-ee0813edac3c" />
 
