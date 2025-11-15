@@ -1,4 +1,9 @@
-<img width="1680" height="938" alt="Frame I" src="https://github.com/user-attachments/assets/c79ec90e-07c2-492c-b080-885b268fabf3" /># Jarkom-Modul-4-2025-K35
+# Jarkom-Modul-4-2025-K35
+
+| Nama | NRP |
+|---|---|
+| Tiara Putri Prasetya | 5027241013 |
+| Naufal Ardhana | 5027241118 |
 
 # Tabel Subnetting IP
 | Nama Subnet | Rute | Jumlah IP | Jumlah IP + 1 | Netmask |
