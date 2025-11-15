@@ -61,6 +61,9 @@
 | A22 | 10.81.15.224 | 255.255.255.252 | 10.81.15.227 | 10.81.15.225 - 10.81.15.226 |
 | A23 | 10.81.15.228 | 255.255.255.252 | 10.81.15.231 | 10.81.15.229 - 10.81.15.230 |
 
+# Subnet Tree VLSM
+<img width="1506" height="760" alt="image" src="https://github.com/user-attachments/assets/0c638b40-d8f0-4b0c-84fa-e0f5acfee799" />
+
 
 # Config Node
 ```
