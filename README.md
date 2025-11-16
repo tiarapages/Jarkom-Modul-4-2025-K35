@@ -103,7 +103,8 @@ iface eth2 inet static
 
 # Tree CIDR
 
-<img width="1090" height="788" alt="Frame 5" src="https://github.com/user-attachments/assets/ce21ce64-bfbb-4529-b57c-df67cbe95ea5" />
+<img width="1090" height="788" alt="Frame 5 (1)" src="https://github.com/user-attachments/assets/b9ee2ede-cac7-4a26-9cd1-6c7befdee321" />
+
 
 
 ### PERTAMA
