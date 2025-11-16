@@ -152,7 +152,7 @@ iface eth2 inet static
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| E1 | D1 | /20 | D3 | /20 | /21 |
+| E1 | D2 | /21 | D3 | /20 | /19 |
 | E2 | D4 | /23 | B6 | /21 | /20 |
 
 ---
@@ -164,7 +164,7 @@ iface eth2 inet static
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| F1 | E1 | /21 | A20 | /30 | /20 |
+| F1 | E1 | /19 | A20 | /30 | /18 |
 | F2 | E2 | /20 | A17 | /30 | /19 |
 
 ---
@@ -176,7 +176,7 @@ iface eth2 inet static
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| G1 | F1 | /20 | A4 | /24 | /19 |
+| G1 | F1 | /18 | A4 | /24 | /17 |
 
 ---
 
@@ -187,7 +187,7 @@ iface eth2 inet static
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| H1 | G1 | /19 | A19 | /30 | /18 |
+| H1 | G1 | /17 | A19 | /30 | /16 |
 
 ---
 
@@ -198,7 +198,7 @@ iface eth2 inet static
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| I1 | H1 | /18 | F2 | /19 | /17 |
+| I1 | H1 | /16 | F2 | /19 | /15 |
 
 ---
 
@@ -209,5 +209,5 @@ iface eth2 inet static
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| J1 | I1 | /17 | D1 | /20 | /16 |
+| J1 | I1 | /15 | D1 | /20 | /14 |
 
