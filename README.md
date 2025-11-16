@@ -101,10 +101,13 @@ iface eth2 inet static
 
 <img width="1680" height="938" alt="Frame A" src="https://github.com/user-attachments/assets/bae785cf-5a8d-4c5a-8f5f-fd9abf6ce244" />
 
+# Tree CIDR
+
+<img width="1090" height="788" alt="Frame 4 (1)" src="https://github.com/user-attachments/assets/e1177d66-e9f0-44c2-a3d0-c826ef0433e2" />
+
 ### PERTAMA
 
 <img width="1680" height="938" alt="Frame B" src="https://github.com/user-attachments/assets/b1081360-cc44-4abe-ad6e-346e62533a7a" />
-
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -121,7 +124,6 @@ iface eth2 inet static
 
 <img width="1680" height="938" alt="Frame C" src="https://github.com/user-attachments/assets/912cc11c-5bd1-40f7-8838-74f6012090a6" />
 
-
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | C1 | B1 | /22 | B2 | /25 | /21 |
@@ -135,7 +137,6 @@ iface eth2 inet static
 
 <img width="1680" height="938" alt="Frame D" src="https://github.com/user-attachments/assets/12d470a6-5a77-4070-8527-e127053002bf" />
 
-
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | D1 | C1 | /21 | A18 | /30 | /20 |
@@ -147,8 +148,7 @@ iface eth2 inet static
 
 ### KEEMPAT
 
-<img width="1680" height="938" alt="Frame E" src="https://github.com/user-attachments/assets/af941c59-239b-4a11-baee-0cc6eeab616b" />
-
+<img width="1680" height="938" alt="Frame E (1)" src="https://github.com/user-attachments/assets/4ed941d3-124d-47f4-9763-b9db1f0c9de6" />
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -159,8 +159,7 @@ iface eth2 inet static
 
 ### KELIMA
 
-<img width="1680" height="938" alt="Frame F" src="https://github.com/user-attachments/assets/2acf6858-9655-452b-9d6b-40d38691a937" />
-
+<img width="1680" height="938" alt="Frame F (1)" src="https://github.com/user-attachments/assets/7f5bea6a-8b94-4973-81e6-414f4c8225cc" />
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -171,8 +170,7 @@ iface eth2 inet static
 
 ### KEENAM
 
-<img width="1680" height="938" alt="Frame G" src="https://github.com/user-attachments/assets/9910bc8c-c392-4d8c-ae23-61ff07c6b25b" />
-
+<img width="1680" height="938" alt="Frame G (1)" src="https://github.com/user-attachments/assets/9fb00a30-b20d-4b98-a888-eea0c03b5f00" />
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -182,8 +180,7 @@ iface eth2 inet static
 
 ### KETUJUH
 
-<img width="1680" height="938" alt="Frame H" src="https://github.com/user-attachments/assets/443dc78c-902c-49c8-ba3d-cc90e7dda5d5" />
-
+<img width="1680" height="938" alt="Frame H (1)" src="https://github.com/user-attachments/assets/d4bf6c3f-780c-47e5-a7b8-fe28f605b244" />
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -193,8 +190,7 @@ iface eth2 inet static
 
 ### KEDELAPAN
 
-<img width="1680" height="938" alt="Frame I" src="https://github.com/user-attachments/assets/1000442f-a531-4646-b8d0-63fecf28ddc6" />
-
+<img width="1680" height="938" alt="Frame I (1)" src="https://github.com/user-attachments/assets/f6dc85da-bc57-4c8a-aecf-1822b8404a40" />
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -204,8 +200,7 @@ iface eth2 inet static
 
 ### KESEMBILAN
 
-<img width="1680" height="938" alt="Frame J" src="https://github.com/user-attachments/assets/faf0bbdd-fe77-48eb-ba5a-2e5a98494ec2" />
-
+<img width="1680" height="938" alt="Frame J (1)" src="https://github.com/user-attachments/assets/ea788d94-4099-4b89-b404-e1bbbaf99059" />
 
 | Subnet | Subnet 1 | Netmask 1 | Subnet 2 | Netmask 2 | Netmask Akhir |
 | :--- | :--- | :--- | :--- | :--- | :--- |
