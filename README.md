@@ -194,6 +194,362 @@ iface eth2 inet static
     # IP Gateway (Valmar) = 10.81.15.129
 ```
 
+# Konfigurasi Client
+```
+[PC-Shadow]
+Interface=FastEthernet0
+IPv4 Address=10.81.12.2
+Subnet Mask=255.255.255.192
+Default Gateway=10.81.12.1
+
+[Server-Anarion]
+Interface=FastEthernet0
+IPv4 Address=10.81.11.2
+Subnet Mask=255.255.255.128
+Default Gateway=10.81.11.1
+
+[Laptop-Lindon]
+Interface=FastEthernet0
+IPv4 Address=10.81.10.2
+Subnet Mask=255.255.255.0
+Default Gateway=10.81.10.1
+
+[Laptop-Donath]
+Interface=FastEthernet0
+IPv4 Address=10.81.13.34
+Subnet Mask=255.255.255.224
+Default Gateway=10.81.13.33
+
+[Laptop-Arnor]
+Interface=FastEthernet0
+IPv4 Address=10.81.13.35
+Subnet Mask=255.255.255.224
+Default Gateway=10.81.13.33
+
+[PC-Imrahil]
+Interface=FastEthernet0
+IPv4 Address=10.81.13.2
+Subnet Mask=255.255.255.224
+Default Gateway=10.81.13.1
+
+[PC-Gwaith]
+Interface=FastEthernet0
+IPv4 Address=10.81.13.66
+Subnet Mask=255.255.255.248
+Default Gateway=10.81.13.65
+
+[Laptop-Utumno]
+Interface=FastEthernet0
+IPv4 Address=10.81.13.67
+Subnet Mask=255.255.255.248
+Default Gateway=10.81.13.65
+
+[PC-Mirkwood]
+Interface=FastEthernet0
+IPv4 Address=10.81.14.2
+Subnet Mask=255.255.255.0
+Default Gateway=10.81.14.1
+
+[PC-Morgul]
+Interface=FastEthernet0
+IPv4 Address=10.81.14.3
+Subnet Mask=255.255.255.0
+Default Gateway=10.81.14.1
+
+[PC-Erendis]
+Interface=FastEthernet0
+IPv4 Address=10.81.15.2
+Subnet Mask=255.255.255.248
+Default Gateway=10.81.15.1
+
+[PC-Harad]
+Interface=FastEthernet0
+IPv4 Address=10.81.15.10
+Subnet Mask=255.255.255.248
+Default Gateway=10.81.15.9
+```
+
+Router Valinor
+```
+enable
+configure terminal
+hostname Valinor-Atas
+
+! Konfigurasi Sub-Interface (Router-on-a-Stick)
+interface FastEthernet0/0
+ no shutdown
+exit
+
+interface FastEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.81.10.1 255.255.255.0
+exit
+
+interface FastEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.81.11.1 255.255.255.128
+exit
+
+interface FastEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 10.81.12.1 255.255.255.192
+exit
+
+! Interface WAN ke Switch2
+interface FastEthernet0/1
+ ip address 10.81.15.225 255.255.255.248
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.10.0 0.0.0.255
+ network 10.81.11.0 0.0.0.127
+ network 10.81.12.0 0.0.0.63
+ network 10.81.15.224 0.0.0.7
+exit
+
+end
+write memory
+```
+Router Valmar
+```
+enable
+configure terminal
+hostname Valinor-Bawah
+
+! Interface WAN ke Switch2
+interface FastEthernet0/0
+ ip address 10.81.15.227 255.255.255.248
+ no shutdown
+exit
+
+! Interface LAN ke Donath/Arnor
+interface FastEthernet1/0
+ ip address 10.81.13.33 255.255.255.224
+ no shutdown
+exit
+
+! Interface LAN ke Gwaith/Utumno
+interface FastEthernet2/1
+ ip address 10.81.13.65 255.255.255.248
+ no shutdown
+exit
+
+! Interface LAN ke Imrahil
+interface FastEthernet3/1
+ ip address 10.81.13.1 255.255.255.224
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.13.0 0.0.0.31
+ network 10.81.13.32 0.0.0.31
+ network 10.81.13.64 0.0.0.7
+ network 10.81.15.224 0.0.0.7
+exit
+
+end
+write memory
+```
+Router Fornost
+```
+enable
+configure terminal
+hostname Fornost
+
+! Interface WAN ke Switch2
+interface FastEthernet0/0
+ ip address 10.81.15.226 255.255.255.248
+ no shutdown
+exit
+
+! Interface WAN ke Amansul
+interface FastEthernet0/1
+ ip address 10.81.200.1 255.255.255.252
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.15.224 0.0.0.7
+ network 10.81.200.0 0.0.0.3
+exit
+
+end
+write memory
+```
+Router Amansul
+```
+enable
+configure terminal
+hostname Amansul
+
+! Interface WAN ke ISP/Cloud
+interface FastEthernet0/0
+ ip address 10.81.200.5 255.255.255.252
+ no shutdown
+exit
+
+! Interface WAN ke Fornost
+interface FastEthernet0/1
+ ip address 10.81.200.2 255.255.255.252
+ no shutdown
+exit
+
+! Interface WAN ke Eregion
+interface FastEthernet1/0
+ ip address 10.81.200.13 255.255.255.252
+ no shutdown
+exit
+
+! Interface WAN ke Minastir
+interface FastEthernet1/1
+ ip address 10.81.200.9 255.255.255.252
+ no shutdown
+exit
+
+! Rute Default ke Internet
+ip route 0.0.0.0 0.0.0.0 10.81.200.6
+
+! Konfigurasi EIGRP dan redistribusi rute default
+router eigrp 100
+ no auto-summary
+ network 10.81.200.0 0.0.0.3
+ network 10.81.200.4 0.0.0.3
+ network 10.81.200.8 0.0.0.3
+ network 10.81.200.12 0.0.0.3
+ redistribute static
+exit
+
+end
+write memory
+```
+ROuter Eregion
+```
+enable
+configure terminal
+hostname Eregion
+
+! Interface WAN ke Amansul
+interface FastEthernet0/0
+ ip address 10.81.200.14 255.255.255.252
+ no shutdown
+exit
+
+! Interface WAN ke Numenor
+interface FastEthernet0/1
+ ip address 10.81.200.17 255.255.255.252
+ no shutdown
+exit
+
+! Interface LAN ke Morgul/Mirkwood
+interface FastEthernet1/0
+ ip address 10.81.14.1 255.255.255.0
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.14.0 0.0.0.255
+ network 10.81.200.12 0.0.0.3
+ network 10.81.200.16 0.0.0.3
+exit
+
+end
+write memory
+```
+Router Minastir
+```
+enable
+configure terminal
+hostname Minastir
+
+! Interface WAN ke Amansul
+interface FastEthernet0/0
+ ip address 10.81.200.10 255.255.255.252
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.200.8 0.0.0.3
+exit
+
+end
+write memory
+```
+Router Numenor
+```
+enable
+configure terminal
+hostname Numenor
+
+! Interface WAN ke Eregion
+interface FastEthernet0/0
+ ip address 10.81.200.18 255.255.255.252
+ no shutdown
+exit
+
+! Interface WAN ke Gudur
+interface FastEthernet0/1
+ ip address 10.81.200.21 255.255.255.252
+ no shutdown
+exit
+
+! Interface LAN ke Erendis
+interface FastEthernet1/0
+ ip address 10.81.15.1 255.255.255.248
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.15.0 0.0.0.7
+ network 10.81.200.16 0.0.0.3
+ network 10.81.200.20 0.0.0.3
+exit
+
+end
+write memory
+```
+Router Gudur
+```
+enable
+configure terminal
+hostname Gudur
+
+! Interface LAN ke Harad
+interface FastEthernet0/0
+ ip address 10.81.15.9 255.255.255.248
+ no shutdown
+exit
+
+! Interface WAN ke Numenor
+interface FastEthernet0/1
+ ip address 10.81.200.22 255.255.255.252
+ no shutdown
+exit
+
+! Konfigurasi EIGRP
+router eigrp 100
+ no auto-summary
+ network 10.81.15.8 0.0.0.7
+ network 10.81.200.20 0.0.0.3
+exit
+
+end
+write memory
+```
+
+
 
 # Penggabungan CIDR
 
