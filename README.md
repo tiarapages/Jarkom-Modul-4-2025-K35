@@ -89,7 +89,76 @@
 | A21 | /30 | 255.255.255.252 | 10.81.15.224 | 10.81.15.225 - 10.81.15.226 | 10.81.15.227 |
 | A22 | /30 | 255.255.255.252 | 10.81.15.228 | 10.81.15.229 - 10.81.15.230 | 10.81.15.231 |
 | A23 | /30 | 255.255.255.252 | 10.81.15.232 | 10.81.15.233 - 10.81.15.234 | 10.81.15.235 |
-CSS
+
+### Tabel Alokasi IP per Unit (Diurutkan per Subnet)
+
+| Subnet | Unit / Interface | IP Address |
+|:---|:---|:---|
+| **A8 (/22)** | Router (Gateway Numenor) | `10.81.0.1` |
+| A8 | Host Block (Arthadain) | `10.81.0.2` |
+| A8 | Host Block (Mirdain) | `10.81.0.3` |
+| **A11 (/22)** | Router (Gateway Anor) | `10.81.4.1` |
+| A11 | Host Block (Beacon) | `10.81.4.2` |
+| A11 | Host Block (Silmaril) | `10.81.4.3` |
+| **A1 (/23)** | Router (Gateway Valinor) | `10.81.8.1` |
+| A1 | Host Block (Shadow) | `10.81.8.2` |
+| A1 | Host Block (Anarion) | `10.81.8.3` |
+| A1 | Host Block (Lindon) | `10.81.8.4` |
+| **A9 (/23)** | Router (Gateway Melkor) | `10.81.10.1` |
+| A9 | Host Block (PC Khazad) | `10.81.10.2` |
+| A9 | Host Block (Server Melkor) | `10.81.10.3` |
+| **A10 (/23)** | Router (Gateway Erain) | `10.81.12.1` |
+| A10 | Host Block (Balrog) | `10.81.12.2` |
+| A10 | Host Block (Gothmog) | `10.81.12.3` |
+| A10 | Host Block (Thranduil) | `10.81.12.4` |
+| **A4 (/25)** | Router (Gateway Eregion) | `10.81.14.1` |
+| A4 | Host Block (Mirkwood) | `10.81.14.2` |
+| A4 | Host Block (Morgul) | `10.81.14.3` |
+| **A6 (/25)** | Router (Gateway Gudhur) | `10.81.14.129` |
+| A6 | Host Block (Palantir) | `10.81.14.130` |
+| A6 | Host Block (Edhil) | `10.81.14.131` |
+| **A5 (/26)** | Router (Gateway Valmar) | `10.81.15.1` |
+| A5 | Host Block (Imrahil) | `10.81.15.2` |
+| A5 | Host Block (Gwaith) | `10.81.15.3` |
+| A5 | Host Block (Utumno) | `10.81.15.4` |
+| **A13 (/26)** | Router (Gateway Morgoth) | `10.81.15.65` |
+| A13 | Host Block (Erendis) | `10.81.15.66` |
+| A13 | Host Block (Elrond) | `10.81.15.67` |
+| **A2 (/27)** | Router (Gateway Valmar) | `10.81.15.129` |
+| A2 | Host Block (Doriath) | `10.81.15.130` |
+| A2 | Host Block (Arnor) | `10.81.15.131` |
+| **A7 (/28)** | Router (Gateway Gudhur) | `10.81.15.161` |
+| A7 | Host Block (IronCrown) | `10.81.15.162` |
+| A7 | Host Block (Hobbiton) | `10.81.15.163` |
+| A7 | Host Block (Grond) | `10.81.15.164` |
+| **A3 (/29)** | Router Interface (Valinor) | `10.81.15.177` |
+| A3 | Router Interface (Valmar) | `10.81.15.178` |
+| A3 | Router Interface (Formost) | `10.81.15.179` |
+| **A12 (/29)** | Router (Gateway Throne) | `10.81.15.185` |
+| A12 | Server (Erebor 1) | `10.81.15.186` |
+| A12 | Server (Erebor 2) | `10.81.15.187` |
+| **A14 (/29)** | Router Interface (Amroth) | `10.81.15.193` |
+| A14 | Router Interface (Throne) | `10.81.15.194` |
+| A14 | Router Interface (Morgoth) | `10.81.15.195` |
+| **A15 (/30)** | Router Interface (Minastir) | `10.81.15.201` |
+| A15 | Router Interface (Amroth) | `10.81.15.202` |
+| **A16 (/30)** | Router Interface (Minastir) | `10.81.15.205` |
+| A16 | Router Interface (Anor) | `10.81.15.206` |
+| **A17 (/30)** | Router Interface (Amonsul) | `1Assl` |
+| A17 | Router Interface (Minastir) | `10.81.15.210` |
+| **A18 (/30)** | Router Interface (Formost) | `10.81.15.213` |
+| A18 | Router Interface (Amonsul) | `10.81.15.214` |
+| **A19 (/30)** | Router Interface (Amonsul) | `10.81.15.217` |
+| A19 | Router Interface (Eregion) | `10.81.15.218` |
+| **A20 (/30)** | Router Interface (Eregion) | `10.81.15.221` |
+| A20 | Router Interface (Numenor) | `10.81.15.222` |
+| **A21 (/30)** | Router Interface (Guldur) | `10.81.15.225` |
+| A21 | Router Interface (Numenor) | `10.81.15.226` |
+| **A22 (/30)** | Router Interface (Numenor) | `10.81.15.229` |
+| A22 | Router Interface (Mordor) | `10.81.15.230` |
+| **A23 (/30)** | Router Interface (Mordor) | `10.81.15.233` |
+| A23 | Router Interface (Erain) | `10.81.15.234` |
+
 
 # Subnet Tree VLSM
 <img width="773" height="696" alt="image" src="https://github.com/user-attachments/assets/3e031599-c290-44a0-91ed-06d31525207e" />
