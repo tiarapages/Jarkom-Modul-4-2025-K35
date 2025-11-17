@@ -144,7 +144,7 @@
 | A15 | Router Interface (Amroth) | `10.81.15.202` |
 | **A16 (/30)** | Router Interface (Minastir) | `10.81.15.205` |
 | A16 | Router Interface (Anor) | `10.81.15.206` |
-| **A17 (/30)** | Router Interface (Amonsul) | `1Assl` |
+| **A17 (/30)** | Router Interface (Amonsul) | `10.81.15.209` |
 | A17 | Router Interface (Minastir) | `10.81.15.210` |
 | **A18 (/30)** | Router Interface (Formost) | `10.81.15.213` |
 | A18 | Router Interface (Amonsul) | `10.81.15.214` |
